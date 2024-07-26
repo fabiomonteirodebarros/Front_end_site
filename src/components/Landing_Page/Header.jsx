@@ -12,7 +12,6 @@ export function Header() {
             </div>
             <ul className={`nav-menu ${showMenu ? 'active' : ''}`}>
                 <li className="nav-item" onClick={() => navigate("/init")}><a href="#" >INÍCIO</a></li>
-                <li className="nav-item"><a href="#team">EQUIPE</a></li>
                 <li className="nav-item" onClick={() => navigate("/products")}><a href="#servicos">PRODUTOS</a></li>
                 <li className="nav-item" onClick={() => navigate("/cadastro")}><a href="#"><i className='bx bx-user'></i></a></li>
                 <li className="nav-item" onClick={() => navigate("/cart")}><a href="#"><i className='bx bx-cart'></i></a></li>

@@ -8,7 +8,9 @@ export function Sacola() {
     const [complemento, setComplemento] = useState('');
     const [numero, setNumero] = useState('');
     const [andar, setAndar] = useState('');
+    const [cupom, setCupom] = useState('');
     const [showPopup, setShowPopup] = useState(false);
+    const [discountApplied, setDiscountApplied] = useState(false);
 
     const handleCepChange = async (event) => {
         const newCep = event.target.value;
@@ -30,6 +32,15 @@ export function Sacola() {
         }
     };
 
+    const handleCupomChange = (event) => {
+        setCupom(event.target.value);
+        if (event.target.value === 'BIO2E1') {
+            setDiscountApplied(true);
+        } else {
+            setDiscountApplied(false);
+        }
+    };
+
     const handleFinalizePurchase = () => {
         setShowPopup(true);
     };
@@ -40,7 +51,8 @@ export function Sacola() {
 
     const deliveryFee = 9.50;
     const subtotal = cart.reduce((total, item) => total + item.preco * item.quantity, 0);
-    const total = subtotal + deliveryFee;
+    const discount = discountApplied ? subtotal * 0.5 : 0;
+    const total = subtotal - discount + deliveryFee;
 
     return (
         <section className="sacola-container">
@@ -63,6 +75,7 @@ export function Sacola() {
             <div className="resumo">
                 <h3>Resumo dos valores</h3>
                 <p>Subtotal <span>R${subtotal.toFixed(2)}</span></p>
+                {discountApplied && <p>Desconto <span>-R${discount.toFixed(2)}</span></p>}
                 {cep.length === 8 && endereco && (
                     <>
                         <p>Taxa de entrega <span>R${deliveryFee.toFixed(2)}</span></p>
@@ -93,9 +106,16 @@ export function Sacola() {
                             onChange={(e) => setComplemento(e.target.value)}
                             placeholder="Complemento"
                         />
-                        
                     </>
                 )}
+            </div>
+            <div className="cupom-container">
+                <input
+                    type="text"
+                    value={cupom}
+                    onChange={handleCupomChange}
+                    placeholder="Digite seu cupom de desconto"
+                />
             </div>
             <div className="botoes">
                 <button className="botao continuar">CONTINUAR COMPRANDO</button>

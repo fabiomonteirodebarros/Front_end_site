@@ -90,6 +90,9 @@
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .team-img-box ul li {
@@ -99,7 +102,9 @@
     border-radius: 50%;
     margin: 3px;
     padding: 7px;
-    display: inline-block;
+    display: flex; /* Use flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    align-items: center; /* Centraliza o ícone verticalmente */
 }
 
 .team-img-box a {
