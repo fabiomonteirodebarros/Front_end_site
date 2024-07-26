@@ -8,6 +8,7 @@ export function Sacola() {
     const [complemento, setComplemento] = useState('');
     const [numero, setNumero] = useState('');
     const [andar, setAndar] = useState('');
+    const [showPopup, setShowPopup] = useState(false);
 
     const handleCepChange = async (event) => {
         const newCep = event.target.value;
@@ -29,6 +30,18 @@ export function Sacola() {
         }
     };
 
+    const handleFinalizePurchase = () => {
+        setShowPopup(true);
+    };
+
+    const closePopup = () => {
+        setShowPopup(false);
+    };
+
+    const deliveryFee = 9.50;
+    const subtotal = cart.reduce((total, item) => total + item.preco * item.quantity, 0);
+    const total = subtotal + deliveryFee;
+
     return (
         <section className="sacola-container">
             <h1 className="sacola-title">SACOLA</h1>
@@ -49,9 +62,13 @@ export function Sacola() {
             ))}
             <div className="resumo">
                 <h3>Resumo dos valores</h3>
-                <p>Subtotal <span>R${cart.reduce((total, item) => total + item.preco * item.quantity, 0).toFixed(2)}</span></p>
-                <p>Taxa de entrega <span>R$9.50</span></p>
-                <p className="total">Total <span>R${(cart.reduce((total, item) => total + item.preco * item.quantity, 0) + 9.50).toFixed(2)}</span></p>
+                <p>Subtotal <span>R${subtotal.toFixed(2)}</span></p>
+                {cep.length === 8 && endereco && (
+                    <>
+                        <p>Taxa de entrega <span>R${deliveryFee.toFixed(2)}</span></p>
+                        <p className="total">Total <span>R${total.toFixed(2)}</span></p>
+                    </>
+                )}
             </div>
             <div className="cep-container">
                 <input
@@ -61,15 +78,9 @@ export function Sacola() {
                     placeholder="Digite seu CEP"
                     maxLength="8"
                 />
-                {endereco && <p>O produto será entregue na {endereco}</p>}
+                {endereco && <p>Endereço de entrega: {endereco}</p>}
                 {endereco && (
                     <>
-                        <input
-                            type="text"
-                            value={complemento}
-                            onChange={(e) => setComplemento(e.target.value)}
-                            placeholder="Complemento"
-                        />
                         <input
                             type="text"
                             value={numero}
@@ -78,17 +89,26 @@ export function Sacola() {
                         />
                         <input
                             type="text"
-                            value={andar}
-                            onChange={(e) => setAndar(e.target.value)}
-                            placeholder="Andar"
+                            value={complemento}
+                            onChange={(e) => setComplemento(e.target.value)}
+                            placeholder="Complemento"
                         />
+                        
                     </>
                 )}
             </div>
             <div className="botoes">
                 <button className="botao continuar">CONTINUAR COMPRANDO</button>
-                <button className="botao finalizar">FINALIZAR COMPRA</button>
+                <button className="botao finalizar" onClick={handleFinalizePurchase}>FINALIZAR COMPRA</button>
             </div>
+            {showPopup && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <h2>Obrigado pela sua compra!</h2>
+                        <button onClick={closePopup}>Fechar</button>
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

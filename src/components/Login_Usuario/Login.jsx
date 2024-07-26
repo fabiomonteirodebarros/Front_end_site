@@ -100,11 +100,6 @@ export function Login() {
                     </div>
                 </div>
             </div>
-            <div className="adm" onClick={() => navigate("/adm")}>
-                <a href="#">
-                    <button type="button">ADMINISTRADOR</button>
-                </a>
-            </div>
         </section>
     );
 }
