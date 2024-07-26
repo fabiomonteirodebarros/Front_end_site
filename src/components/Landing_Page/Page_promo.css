@@ -1,0 +1,66 @@
+.first-section {
+    width: 100vw;
+    height: 70vh; /* Ajustado para ser um banner */
+    background-image: url("src/assets/Promocao.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position-y:15px ;
+}
+
+.first-section .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo ao centro */
+    margin: 0; /* Remove as margens */
+}
+
+.btn button {
+    width: auto; /* Define largura automática para ajustar ao conteúdo */
+    height: 80px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: linear-gradient(rgba(87, 102, 71),rgba(141, 165, 115, 1)) !important;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 900;
+    font-size: 1.2rem;
+    background-repeat: no-repeat;
+    margin-top: 15rem;
+    background-size: 30px;
+    padding-left: 40px; /* Ajusta o padding para dar mais espaço para o texto */
+    padding-right: 40px; /* Adiciona padding à direita para equilibrar */
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho do botão */
+}
+
+.btn button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .first-section {
+        justify-content: center; /* Centraliza o conteúdo principal verticalmente */
+        background-position-y: 0; /* Ajusta a posição y do fundo para melhor visualização */
+    }
+
+    .first-section .conteudo-principal {
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        margin: 0; /* Remove as margens */
+        padding: 0 2rem; /* Adiciona um pouco de padding nas laterais para evitar que o texto toque as bordas */
+    }
+
+    .btn button {
+        width: 100%; /* Faz o botão expandir para a largura total */
+        max-width: 300px; /* Limita a largura máxima do botão para não ficar muito grande */
+        margin: 0 auto; /* Centraliza o botão horizontalmente */
+        padding-left: 70px; /* Aumenta o padding esquerdo para separar o texto do ícone */
+        background-position: 15px center; /* Ajusta a posição do ícone para a esquerda */
+    }
+}

@@ -1,0 +1,104 @@
+.navbar {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between; /* Alterado para space-between */
+    align-items: center;
+    background-color: rgba(141, 165, 115, 1);
+    position: fixed;
+    padding: 0 2rem; /* Ajustado para espaçamento balanceado */
+    z-index: 5000;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 130px;
+    height: 100px; /* Ajusta para manter a proporção */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha itens à direita */
+    list-style: none; /* Remove os marcadores padrão da lista */
+    margin: 0; /* Remove margin padrão da lista */
+    padding: 0; /* Remove padding padrão da lista */
+    flex-grow: 1; /* Permite que o menu cresça para ocupar espaço disponível */
+}
+
+.nav-item {
+    margin-left: 2rem; /* Adiciona espaçamento entre itens do menu */
+}
+
+.nav-menu li a {
+    padding: 1rem; /* Ajusta padding para centralizar os itens */
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: all 200ms ease-in;
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.nav-menu li a:hover {
+    font-weight: 1000; /*perguntar o que o grupo prefere*/
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg) ;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(141, 165, 115, 1); /* Ajuste para a cor desejada */
+        text-align: center;
+        border-radius: 0 0 20px 20px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 16px 0 !important;
+    }
+}

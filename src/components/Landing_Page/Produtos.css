@@ -1,0 +1,102 @@
+#servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+#tratamentos, .tratamentos-baixo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+#tratamentos {
+    margin-bottom: 4rem; /* Adiciona espaço abaixo de #tratamentos */
+}
+
+.tratamento, .tratamento-baixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Definindo uma largura fixa para as caixas */
+    height: 200px; /* Definindo uma altura fixa para as caixas */
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.logo-servico, .logo-servico-baixo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1); /* Adiciona a sombra */
+}
+
+.section-button {
+    margin-top: 4rem;
+}
+
+.section-button button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(rgba(141, 165, 115, 1),rgb(87, 102, 71));
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+.section-button button:hover {
+    background: linear-gradient(rgba(87, 102, 71),rgba(141, 165, 115, 1));
+}
+
+@media (max-width: 768px) {
+    #tratamentos, .tratamentos-baixo {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tratamento, .tratamento-baixo {
+        width: 90%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .logo-servico, .logo-servico-baixo {
+        width: 100%;
+        height: auto;
+    }
+
+    .section-button {
+        margin-top: 2rem;
+    }
+
+    .section-button button {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.6rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #tratamentos, .tratamentos-baixo {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tratamento, .tratamento-baixo {
+        width: 90%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .logo-servico, .logo-servico-baixo {
+        width: 100%;
+        height: auto;
+    }
+}

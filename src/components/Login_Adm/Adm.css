@@ -1,0 +1,126 @@
+.page-login {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(src/assets/barras.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px); /* Aplicando o efeito de desfoque */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    z-index: 2;
+    width: 400px;
+    padding: 40px;
+    background-color: rgba(141, 165, 115);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box h2 {
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.box .social-icons {
+    margin: 20px 0;
+}
+
+.box .social-icons a {
+    color: #fff;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.box .inputBox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.box .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    background-color: transparent;
+}
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+    top: -18px;
+    left: 0;
+    color: rgb(85, 99, 69);
+    font-size: 12px;
+}
+
+.box input[type="submit"] {
+    background-color: rgb(254, 254, 254);
+    border: none;
+    outline: none;
+    color: rgba(141, 165, 115);
+    font-weight: 900;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.user-button {
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.user-button button {
+    background-color: rgba(141, 165, 115);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 10px 45px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.user-button button:hover {
+    background-color: rgb(85, 99, 69);
+    color: #fff;
+}

@@ -1,0 +1,97 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(232, 230, 230);
+    height: 100;
+    padding: 2rem;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    width: 150px;
+    height: 150px;
+    margin-top: 4rem;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.info-content {
+    text-align: center;
+}
+
+.info-content img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.info-content h1 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.info-content h3 {
+    font-size: 1rem;
+    color: #555;
+}
+
+.payment-table {
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-table h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.payment-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.payment-table th,
+.payment-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.payment-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    color: #333;
+}
+
+.payment-table td {
+    color: #555;
+}
+
+.payment-table button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.payment-table button:hover {
+    text-decoration: underline;
+}

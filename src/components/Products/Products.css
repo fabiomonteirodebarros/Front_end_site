@@ -1,0 +1,79 @@
+.endereco {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+#produtos {
+    width: 100%;
+    padding: 2rem 0;
+    background: rgb(255, 255, 255)
+    background-size: cover;
+    background-position: center;
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.produto {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto-imagem {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.produto-descricao h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.produto-descricao p {
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem;
+    color: #555;
+}
+
+.produto-button {
+    background: linear-gradient(rgba(141, 165, 115, 1),rgb(87, 102, 71));
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 50px;
+}
+
+.produto-button i {
+    font-size: 1.2rem;
+}
+
+.produto-button:hover {
+    background: linear-gradient(rgba(87, 102, 71),rgba(141, 165, 115, 1));
+}
+
+
