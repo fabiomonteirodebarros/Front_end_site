@@ -17,7 +17,7 @@ export function Login() {
             if (data.is_employee){
                 navigate("/func");
             } else {
-                navigate ("/cadastro");
+                navigate ("/products");
             }
         }
     };
@@ -81,7 +81,6 @@ export function Login() {
                         <span>Use seu email e senha para logar-se</span>
                         <input type="email" placeholder="Email" required onChange={(ev) => setEmail(ev.target.value)} />
                         <input type="password" placeholder="Senha" required onChange={(ev) => setPassword(ev.target.value)} />
-                        <a href="#">Esqueceu a senha?</a>
                         <button type="submit" onClick={userLogin}>Login</button>
                     </div>
                 </div>
