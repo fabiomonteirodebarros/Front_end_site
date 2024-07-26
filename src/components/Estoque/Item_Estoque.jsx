@@ -25,7 +25,17 @@ export function ProdutosQuantidade() {
         { nome: 'BIONUTRI Bombom Crocante', imagem: 'src/assets/barra_marrom_sem_fundo.png', descricao: '12x BIONUTRI BOMBOM CROCANTE (20g)', preco: 'R$ 115,00', quantidade: 1 },
         { nome: 'BIONUTRI Bombom Crocante', imagem: 'src/assets/barra_marrom_sem_fundo.png', descricao: '12x BIONUTRI BOMBOM CROCANTE (40g)', preco: 'R$ 135,00', quantidade: 1 },
         { nome: 'BIONUTRI Caixa Mista', imagem: 'src/assets/caixa_mista_sem_fundo.png', descricao: 'BIONUTRI CAIXA MISTA (20g)', preco: 'R$ 115,00', quantidade: 1 },
-        { nome: 'BIONUTRI Caixa Mista', imagem: 'src/assets/caixa_mista_sem_fundo.png', descricao: 'BIONUTRI CAIXA MISTA (40g)', preco: 'R$ 135,00', quantidade: 1 }
+        { nome: 'BIONUTRI Caixa Mista', imagem: 'src/assets/caixa_mista_sem_fundo.png', descricao: 'BIONUTRI CAIXA MISTA (40g)', preco: 'R$ 135,00', quantidade: 1 },
+        { nome: 'BIOWHEYFER MORANGO', imagem: 'src/assets/barra_rosa.png',descricao: '1x BIOWHEYFER MORANGO (35g)', preco: 'R$ 8,00', quantidade: 1 },
+        { nome: 'BIOWHEYFER MORANGO', imagem: 'src/assets/barra_rosa.png',descricao: '12x BIOWHEYFER MORANGO (35g)', preco: 'R$ 80,00', quantidade: 1 },
+        { nome: 'BIOWHEYFER CHOCOLATE', imagem: 'src/assets/barra_azul.png',descricao: '1x BIOWHEYFER CHOCOLATE (35g)', preco: 'R$ 8,00', quantidade: 1  },
+        { nome: 'BIOWHEYFER CHOCOLATE', imagem: 'src/assets/barra_azul.png',descricao: '12x BIOWHEYFER CHOCOLATE (35g)', preco: 'R$ 80,00', quantidade: 1  },
+        { nome: 'BIOWHEYFER BAUNILHA', imagem: 'src/assets/barra_vermelha.png',descricao: '1x BIOWHEYFER BAUNILHA (35g)', preco: 'R$ 8,00', quantidade: 1  },
+        { nome: 'BIOWHEYFER BAUNILHA', imagem: 'src/assets/barra_vermelha.png',descricao: '12x BIOWHEYFER BAUNILHA (35g)', preco: 'R$ 80,00', quantidade: 1  },
+        { nome: 'BIOWHEYFER  BITES CHOCOLATE', imagem: 'src/assets/bites_pas.png',descricao: '1x BIOWHEYFER BITES (35g)', preco: 'R$ 8,00', quantidade: 1  },
+        { nome: 'BIOWHEYFER  BITES CHOCOLATE', imagem: 'src/assets/bites_pas.png',descricao: '12x BIOWHEYFER BAUNILHA (35g)', preco: 'R$ 80,00', quantidade: 1  },
+        { nome: 'BIOWHEYFER  BITES BAUNILHA', imagem: 'src/assets/bites.png',descricao: '1x BIOWHEYFER BAUNILHA (35g)', preco: 'R$ 8,00', quantidade: 1  },
+        { nome: 'BIOWHEYFER BITES BAUNILHA', imagem: 'src/assets/bites.png',descricao: '12x BIOWHEYFER BAUNILHA (35g)', preco: 'R$ 80,00', quantidade: 1  },
     ];
 
     const [produtos, setProdutos] = useState(produtosIniciais);
